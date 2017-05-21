@@ -1,6 +1,7 @@
-{ nixpkgs ? import <nixpkgs> {}, this_repo }:
+{ this_repo }:
 
 let
+  nixpkgs = import <nixpkgs> {};
   tomlfile = ./nightly.toml;  
   parseTOML = import ./parseTOML.nix;
   fromTOML = parseTOML.fromTOML;
